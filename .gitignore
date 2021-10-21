@@ -1,0 +1,15 @@
+.Rproj.user
+
+# History files
+.RData
+.Rhistory
+.Rapp.history
+
+# temp files
+*~
+.DS_Store
+
+# common devel objects
+.Renviron
+
+btable.Rproj
