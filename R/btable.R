@@ -15,7 +15,7 @@
 #' @param bal.vars The variables to balance across groups.
 #' @param group.var The variable identifying the two groups, treatment and control. Should be
 #' binary, with 0 identifying the control group and 1 the treatment.
-#' @param panel By default `F`. Switch to `T` is data set is a panel with variables to be
+#' @param panel By default `FALSE`. Switch to `TRUE` is data set is a panel with variables to be
 #' balanced as columns.
 #' @param new.names.bal.vars A named vector used to rename the variables to be balanced.
 #' @param save.path By default `NULL`. Indicate a path where the balance table should be saved.

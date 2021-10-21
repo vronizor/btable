@@ -28,7 +28,7 @@ the unique value of the row.}
 \item{group.var}{The variable identifying the two groups, treatment and control. Should be
 binary, with 0 identifying the control group and 1 the treatment.}
 
-\item{panel}{By default \code{F}. Switch to \code{T} is data set is a panel with variables to be
+\item{panel}{By default \code{FALSE}. Switch to \code{TRUE} is data set is a panel with variables to be
 balanced as columns.}
 
 \item{new.names.bal.vars}{A named vector used to rename the variables to be balanced.}
