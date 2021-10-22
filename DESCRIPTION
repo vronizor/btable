@@ -14,10 +14,10 @@ Description: This package lets the users easily create balance tables as they ar
 License: GPL-3
 URL: https://github.com/vronizor/btable
 BugReports: https://github.com/vronizor/btable/issues
+Imports:
+	data.table,
+	stringr,
+	gt
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-Imports:
-	data.table (>= 1.9.4),
-	dplyr,
-	gt

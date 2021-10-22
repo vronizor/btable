@@ -19,7 +19,13 @@
 #' balanced as columns.
 #' @param new.names.bal.vars A named vector used to rename the variables to be balanced.
 #' @param save.path By default `NULL`. Indicate a path where the balance table should be saved.
+#'
 #' @return A `gt` table object.
+#'
+#' @import data.table
+#' @import gt
+#' @import stringr
+#'
 #' @export
 btable <- function(data, id.vars, bal.vars, group.var,
                    panel = F, new.names.bal.vars = NULL,
@@ -55,7 +61,7 @@ btable <- function(data, id.vars, bal.vars, group.var,
 
   ## Mean and SE
   btab_gr.mse = data.l[, .(mean = mean(value),
-                           se = stderr(value)),
+                           se = stder(value)),
                        by = c(group.var, 'var')]
   # Reshapes
   btab.mse.l = melt(btab_gr.mse, id.vars = c(group.var, 'var'), variable.name = 'stat')
@@ -80,7 +86,7 @@ btable <- function(data, id.vars, bal.vars, group.var,
 
   ## Mean and SE
   btab_all.mse = data[, .(mean = mean(value),
-                          se = stderr(value)),
+                          se = stder(value)),
                       by = c('var')]
   # Reshapes
   btab_all.mse.l = melt(btab_all.mse, id.vars = c('var'), variable.name = 'stat', value.name = 'g_all')
